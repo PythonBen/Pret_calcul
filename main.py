@@ -36,7 +36,7 @@ class LoanCalculator:
             
             c1 = emprunt * rate / (pow(1 + rate, months) - 1)
             monthly_payment = emprunt * rate + c1
-            total_cost = c1 * months * pow(1 + rate, months) - emprunt
+            total_cost = monthly_payment * months  - emprunt
             
         return round(monthly_payment, 2), round(total_cost, 2)
 
